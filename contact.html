@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NovaWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .intro-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #b0b0b0;
+            margin-bottom: 60px;
+        }
+
+        .status-box {
+            padding: 40px;
+            background: var(--nv-surface);
+            border-radius: var(--nv-radius);
+            display: inline-block;
+            box-shadow: 0 0 30px rgba(255, 204, 51, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .status-box p {
+            font-size: 1.1rem;
+            margin: 0;
+            color: var(--nv-accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NovaWorks</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="magnus.html">Magnus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="contact-section">
+            <div class="contact-content">
+                <h1 data-title-fx="gold" data-title-color="#ffcc33" data-title-font="bookman">Get in Touch</h1>
+
+                <div data-divider="flourish" data-divider-color="#ffcc33"></div>
+
+                <p class="intro-text">
+                    Have something you want built? Tell NuvolaSI in plain words - get in touch.
+                </p>
+
+                <div class="status-box" data-border="gilded" data-border-color="#ffcc33">
+                    <p>Email address coming soon</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 NovaWorks. Powered by NuvolaSI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="three.min.js"></script>
+    <script src="nuvola_scenes.js"></script>
+    <script src="nuvola_flair.js"></script>
+    <script src="site.js"></script>
+</body>
+</html>

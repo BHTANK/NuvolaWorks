@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - NovaWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-bottom: 100px;
+        }
+
+        .step-card {
+            padding: 40px;
+            background: var(--nv-surface);
+            border-radius: var(--nv-radius);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(255, 204, 51, 0.2);
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .step-card h3 {
+            color: var(--nv-accent);
+            margin-top: 0;
+        }
+
+        .faq-section {
+            margin-top: 100px;
+            padding: 60px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--nv-radius);
+        }
+
+        .faq-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .highlight {
+            color: var(--nv-accent);
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        /* the lounge picture as a real banner across the top, the headline under it on the moving
+           gold network (Claude smoothing 2026-11-08, Tank: "worthy, but not a gold standard") */
+        section[data-hero] { display: block !important; padding: 0 !important; min-height: 0 !important; text-align: center; }
+        section[data-hero] > img.nw-banner { display: block; width: 100%; height: min(52vh, 520px); object-fit: cover; object-position: center 58%; border-bottom: 2px solid var(--nv-accent); margin: 0; max-width: none; }
+        .nw-banner-text { position: relative; z-index: 2; padding: 2.6rem 1.5rem 2.4rem; max-width: 900px; margin: 0 auto; }
+        .nw-banner-text p { color: #e8e8e8; font-size: 1.2rem; margin: 0.6rem auto 0; }
+        /* the four steps side by side on a wide screen, two by two below that (they wrapped 3 + 1) */
+        .step-grid { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 1.4rem; }
+        @media (max-width: 1100px) { .step-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+        @media (max-width: 600px) { .step-grid { grid-template-columns: 1fr !important; } }
+    </style>
+</head>
+<body data-bg="grid">
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NovaWorks</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="how-it-works.html" class="active" aria-current="page">How It Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="magnus.html">Magnus</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section data-hero="particles" data-accent="#ffcc33">
+        <img src="images/hero-lounge.jpg" alt="A lounge under a glass roof open to the night sky" class="nw-banner">
+        <div class="container nw-banner-text">
+            <h1 data-title-fx="gold" data-title-color="#ffcc33" data-title-font="bookman">The Path to Creation</h1>
+            <p>From your words to the finished product, in four steps.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+
+            <div data-divider="ornament" data-divider-color="#ffcc33"></div>
+
+            <section id="process">
+                <h2 class="section-title">The Creation Cycle</h2>
+                <div class="step-grid">
+                    <div class="step-card" data-tilt data-spotlight data-border="gilded" data-border-color="#ffcc33">
+                        <div class="step-number">01</div>
+                        <h3>You Describe</h3>
+                        <p>You describe what you want, in plain words.</p>
+                    </div>
+                    <div class="step-card" data-tilt data-spotlight data-border="gilded" data-border-color="#ffcc33">
+                        <div class="step-number">02</div>
+                        <h3>NuvolaSI Plans</h3>
+                        <p>NuvolaSI plans it and builds it.</p>
+                    </div>
+                    <div class="step-card" data-tilt data-spotlight data-border="gilded" data-border-color="#ffcc33">
+                        <div class="step-number">03</div>
+                        <h3>Run & Verify</h3>
+                        <p>NuvolaSI runs it and checks it with its own eyes and real validators.</p>
+                    </div>
+                    <div class="step-card" data-tilt data-spotlight data-border="gilded" data-border-color="#ffcc33">
+                        <div class="step-number">04</div>
+                        <h3>You Receive</h3>
+                        <p>You receive the finished product.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div data-divider="ornament" data-divider-color="#ffcc33"></div>
+
+            <section class="faq-section">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <div data-accordion="one">
+                    <details>
+                        <summary>How long does a build take?</summary>
+                        <p>A website usually takes 20 to 60 minutes. Pictures and smaller programs take less.</p>
+                    </details>
+                    <details>
+                        <summary>What exactly do I receive at the end?</summary>
+                        <p>The finished product: the website's files, the picture, the code or the worked answer - checked before it is handed over.</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 NovaWorks. Powered by NuvolaSI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="three.min.js"></script>
+    <script src="nuvola_scenes.js"></script>
+    <script src="site.js"></script>
+    <script src="nuvola_flair.js"></script>
+    <script src="nuvola_ui.js"></script>
+</body>
+</html>

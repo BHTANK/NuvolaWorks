@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - NovaWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --nv-accent: #ffcc33; /* Nova Gold */
+            --nv-ink: #000000; /* Pure Black */
+            --nv-surface: #0d0d0d;
+            --nv-radius: 8px;
+        }
+
+        body {
+            background-color: #000000;
+            color: #e0e0e0;
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+
+
+
+
+
+
+
+        main {
+            padding: 80px 0;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .tabs-container {
+            margin-top: 40px;
+        }
+
+        .tabs-header {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--nv-ink);
+            border: 1px solid rgba(255, 204, 51, 0.3);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--nv-accent);
+        }
+
+        .tab-btn.active {
+            background: var(--nv-accent);
+            color: var(--nv-ink);
+            border-color: var(--nv-accent);
+        }
+
+        .tab-panel {
+            padding: 40px;
+            background: var(--nv-surface);
+            border: 1px solid rgba(255, 204, 51, 0.2);
+            border-radius: var(--nv-radius);
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            padding: 30px;
+            background: var(--nv-surface);
+            border: 1px solid rgba(255, 204, 51, 0.2);
+            border-radius: var(--nv-radius);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--nv-accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .service-card h3 {
+            color: var(--nv-accent);
+            margin-top: 0;
+        }
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .tab-btn {
+                padding: 10px 16px;
+            }
+        }
+        /* Services as the request words it: one gilded card per tab, the picture inside it (Claude smoothing 2026-11-08) */
+        .page-title p { text-align: center; margin-left: auto; margin-right: auto; }
+        .nw-service { max-width: 760px; margin: 2rem auto; padding: 2.4rem 2.6rem; text-align: center; background: #0d0d0d; }
+        .nw-service h2 { color: var(--nv-accent); margin-bottom: 1rem; }
+        .nw-service p { color: #e8e8e8; font-size: 1.15rem; line-height: 1.6; }
+        .nw-service-img { display: block; width: 100%; max-width: 560px; margin: 1.6rem auto 0; border-radius: 6px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NovaWorks</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="magnus.html">Magnus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1 data-title-fx="gold" data-title-color="#ffcc33" data-title-font="bookman">
+                Capabilities of NuvolaSI
+            </h1>
+            <p>Finished work from plain words: websites, images, code and computation.</p>
+        </section>
+
+        <div data-divider="ornament" data-divider-color="#ffcc33"></div>
+
+        <div class="tabs-container">
+            <div data-tabs>
+                <div class="tabs-header">
+                    <button data-tab="web" class="tab-btn">Websites</button>
+                    <button data-tab="images" class="tab-btn">Images</button>
+                    <button data-tab="code" class="tab-btn">Code</button>
+                    <button data-tab="compute" class="tab-btn">Computation</button>
+                </div>
+
+                <div data-panel="web" class="tab-panel">
+                    <div class="service-card nw-service" data-border="gilded" data-border-color="#ffcc33">
+                        <h2>Websites</h2>
+                        <p>Multi-page sites with the look and working parts you describe, run on NuvolaSI's own screen and checked before delivery.</p>
+                    </div>
+                </div>
+
+                <div data-panel="images" class="tab-panel">
+                    <div class="service-card nw-service" data-border="gilded" data-border-color="#ffcc33">
+                        <h2>Images</h2>
+                        <p>Pictures drawn from a description and checked before they are sent.</p>
+                        <img src="images/images.jpg" alt="A picture NuvolaSI drew for this site: a golden frame under a night sky" class="nw-service-img">
+                    </div>
+                </div>
+
+                <div data-panel="code" class="tab-panel">
+                    <div class="service-card nw-service" data-border="gilded" data-border-color="#ffcc33">
+                        <h2>Code</h2>
+                        <p>Complete projects in C, C++, Rust, Java, JavaScript, Ruby, Lua, Perl, Bash and Godot, each compiled or checked before delivery.</p>
+                        <img src="images/code.jpg" alt="A picture NuvolaSI drew for this site about code" class="nw-service-img">
+                    </div>
+                </div>
+
+                <div data-panel="compute" class="tab-panel">
+                    <div class="service-card nw-service" data-border="gilded" data-border-color="#ffcc33">
+                        <h2>Computation</h2>
+                        <p>Math, science, statistics and unit conversions worked out exactly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-divider="ornament" data-divider-color="#ffcc33"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 NovaWorks. Powered by NuvolaSI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="three.min.js"></script>
+    <script src="nuvola_scenes.js"></script>
+    <script src="nuvola_flair.js"></script>
+    <script src="nuvola_ui.js"></script>
+    <script src="site.js"></script>
+</body>
+</html>

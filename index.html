@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - NovaWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --nv-accent: #ffcf40; /* Nova Gold */
+            --nv-ink: #000000;    /* Pure Black */
+            --nv-surface: #0d0d0d;
+            --nv-glow: rgba(255, 207, 64, 0.3); /* Nova Gold Glow */
+            --nv-radius: 8px;
+        }
+
+        body {
+            background-color: var(--nv-ink);
+            color: #e0e0e0;
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+
+
+
+
+
+
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background: var(--nv-ink);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: #f5f5f5;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            /* readable over the bright ceiling beam (Tank: "Those words are hardly noticable"):
+               a soft dark panel + shadow behind the words, the placement unchanged */
+            background: rgba(0, 0, 0, 0.62);
+            padding: 0.7rem 1.4rem;
+            border-radius: 10px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 28px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        .btn-primary {
+            padding: 1rem 2.5rem;
+            background: var(--nv-accent);
+            color: var(--nv-ink);
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(255, 207, 64, 0.4);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: var(--nv-ink);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            padding: 2.5rem;
+            background: var(--nv-surface);
+            border-radius: var(--nv-radius);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            box-shadow: 0 0 15px var(--nv-glow);
+            border: 1px solid rgba(255, 207, 64, 0.2);
+            border: 1px solid rgba(255, 207, 64, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--nv-accent);
+            box-shadow: 0 0 25px var(--nv-glow);
+        }
+
+        .card h3 {
+            color: var(--nv-accent);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+
+        .footer-content {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Utilities */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--nv-accent), transparent);
+            margin: 4rem 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="active logo" aria-current="page">NovaWorks</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="magnus.html">Magnus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" data-hero="starfield" data-accent="#ffcf40">
+            <img src="images/hero.jpg" alt="A vast, high-tech landscape representing the power of NuvolaSI" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+            <div class="hero-content">
+                <h1 data-title-fx="gold" data-title-color="#ffcf40">Build Anything With Words</h1>
+                <p>NuvolaSI: A SuperIntelligence that transforms plain human language into finished, production-ready digital assets.</p>
+                <a href="services.html" class="btn-primary">See What It Does</a>
+            </div>
+        </section>
+
+        <div data-divider="wave" data-divider-color="#ffcf40"></div>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2 data-title-fx="gold" data-title-color="#ffcf40">The Capabilities</h2>
+                </div>
+                
+                <div class="grid">
+                    <div class="card" data-tilt data-border="gilded" data-border-color="#ffcf40">
+                        <h3>Websites</h3>
+                        <p>Full-scale, multi-page sites with polished aesthetics and functional logic.</p>
+                    </div>
+                    <div class="card" data-tilt data-border="gilded" data-border-color="#ffcf40">
+                        <h3>Images</h3>
+                        <p>High-fidelity visuals generated from descriptive prompts and verified for accuracy.</p>
+                    </div>
+                    <div class="card" data-tilt data-border="gilded" data-border-color="#ffcf40">
+                        <h3>Code</h3>
+                        <p>Production-ready scripts in C++, Rust, and more, fully compiled and tested.</p>
+                    </div>
+                    <div class="card" data-tilt data-border="gilded" data-border-color="#ffcf40">
+                        <h3>Answers</h3>
+                        <p>Complex calculations, scientific data, and precise technical solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="partner-band" style="padding: 4rem 0; background: var(--nv-surface); border-top: 1px solid var(--nv-accent); border-bottom: 1px solid var(--nv-accent); text-align: center;">
+            <div class="container">
+                <p style="margin: 0; font-size: 1.1rem; color: #fff;">
+                    Partner: Magnus, SI agents that clear the busywork. 7-day free trial.
+                    <a href="https://getmagnus.co/?ref=f1ff4e0187" class="btn-primary" style="margin-left: 1rem;">Try Magnus free</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 NovaWorks. Powered by NuvolaSI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="three.min.js"></script>
+    <script src="nuvola_scenes.js"></script>
+    <script src="nuvola_flair.js"></script>
+    <script src="site.js"></script>
+</body>
+</html>
