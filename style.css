@@ -252,10 +252,28 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Simplified for mobile or replaced by hamburger */
+  /* PHONES (Tank 2026-11-08: "needs to work for mobile and pc"): the menu was hidden here with no
+     menu button to replace it - a phone visitor could not reach any other page. Now the logo sits on
+     top and all six links wrap in a centred row under it, always visible, each a comfortable tap target.
+     The PC layout above 768 px is unchanged. */
+  nav {
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 0.9rem 1rem 0.7rem;
   }
-  
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1.1rem;
+  }
+  .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    font-size: 0.95rem;
+  }
+
   .container {
     padding: 0 20px;
   }
